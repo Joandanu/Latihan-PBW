@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Membuat Video</title>
+    </head>
+    <body>
+        <h1>Contoh Video Di WEB</h1>
+        <video width="30%" id="myVideo">
+            <source src="cat-herd.webm" type="video/webm">
+        </video>
+        <button onclick="playVid()">Play</button>
+        <button onclick="pauseVid()">Pause</button>
+        <button onclick="durationVid()">Video Duration</button>
+        <button onclick="enableControls()">Enable Controls</button>
+        <button onclick="disableControls()">Disable Controls</button>
+        <button onclick="checkControls()">Check Controls Status</button>
+        <button onclick="enableLoop()">Enable Loop</button>
+        <button onclick="disableLoop()">Disable Loop</button>
+        <button onclick="checkLoop()">Check Loop Status</button><br>
+    </body>
+    <script> 
+        var vid = document.getElementById("myVideo"); 
+        
+        function playVid() { 
+          vid.play(); 
+        } 
+        
+        function pauseVid() { 
+          vid.pause(); 
+        } 
+        function durationVid() {
+           alert(vid.duration);
+        } 
+        function enableControls() {
+            vid.controls = true;
+            vid.load;
+        }
+        function disableControls() {
+            vid.controls = false;
+            vid.load;
+        }
+        function checkControls() {
+            alert(vid.controls);
+        }
+        function enableLoop() { 
+        vid.loop = true;
+        vid.load();
+        } 
+        function disableLoop() { 
+        vid.loop = false;
+        vid.load();
+        } 
+        function checkLoop() { 
+        alert(vid.loop);
+        }     
+        </script> 
