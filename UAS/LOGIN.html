@@ -9,21 +9,36 @@
     </head>
 
     <body>
-        <img src="Annotation 2022-12-12 200803-modified (1).png">
+        <img src="Gambar/Annotation 2022-12-12 200803-modified (1).png">
         <h1>LOGIN :</h1>
         <div class="grouptop">
             <label for="user" class="username">
                 USERNAME :
             </label><br>
-            <input type="text" name="user" id="user" aria-label="Username" placeholder="Username">
+            <input type="text" name="user" id="user" aria-label="Username" placeholder="Username : user123">
         </div>
         <div class="groupbottom">
             <label for="userpass" class="password">
                 PASSWORD :
             </label><br>
-            <input type="password" name="userpass" id="userpass" aria-label="userpass" placeholder="Password">
+            <input type="password" name="userpass" id="userpass" aria-label="userpass" placeholder="Password : user123">
         </div>
         <div class="submit-wrap">
-            <button type="submit" id="submit" class="login-submit">LOGIN</button>
+            <button type="submit" id="submit" class="login-submit" onclick="login()">LOGIN</button>
         </div>
+        <script>
+            const dataUser ={
+                username:"user123",
+                password:"user123"
+            }
+            const usernameInput = document.getElementById("user")
+            const passwordInput = document.getElementById("userpass")
+            function login() {
+                if (usernameInput.value===dataUser.username && passwordInput.value===dataUser.password) {
+                    window.open("./HOME.html","_self")
+                } else {
+                    alert("USERNAME ATAU PASSWORD SALAH \nUSER : user123 \nPASSWORD : user123")
+                }
+            }
+        </script>
     </body>
